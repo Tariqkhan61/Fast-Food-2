@@ -1,0 +1,263 @@
+/* Base Styles */
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo h1 {
+    margin: 0;
+    color: blue;
+ }
+
+ header .logo img {
+    max-width: 50px; 
+    height: auto;
+ }
+ 
+ header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: larger;
+}
+
+header nav ul li a:hover {
+    color: purple;
+}
+
+.hero {
+    background-image: url(img/fastfood.jpg);
+    background-size: contain;
+    color: red;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    border: 2px solid black;
+    display: inline-block;
+    background-color: gold;
+}
+
+.hero button {
+    background-color: blueviolet;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.menu {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.menu h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-item {
+    flex: 1 1 calc(25% - 20px);
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-item h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.menu-item p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.menu-item span {
+    font-size: 1.2rem;
+    color: #007BFF;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+.offers {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f3f3f3;
+}
+
+.offers h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: purple;
+}
+.offers p{
+    margin-left: 50px;
+    margin-right: 50px;
+    color: red;
+    font-size: 20px;
+}
+
+.offers ul {
+    list-style: none;
+    padding: 0;
+    font-size: 2.5rem;
+}
+
+.offers ul li {
+    margin-bottom: 10px;
+    color: blue;
+    font-size: x-large;
+}
+
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 1.2rem;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #007BFF;
+}
+
+/* Social Media Icons */
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    font-size: 1.8rem;
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #ff6347; /* Changes color on hover */
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .menu-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .menu-item {
+        flex: 1 1 100%;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero button {
+        font-size: 1rem;
+    }
+
+    .menu h2, .offers h2, .contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .menu-item h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero button {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+}
